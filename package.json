@@ -1,0 +1,14 @@
+{
+  "name": "SuperTripper_Basic_Auth",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:BlurredDev/SuperTripper_Basic_Auth.git",
+  "author": "Adil MOUNJID <adil.mounjid@gmail.fr>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
