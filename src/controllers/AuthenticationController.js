@@ -10,8 +10,8 @@ module.exports = class AuthenticationController {
                 return res.status(401).send('Authentification Requise')
 
             const auth = req.headers.authorization.split(' ')[1]
-            const strauth = Buffer.from(auth).toString('utf-8')
-            const splitIndex = strauth.toString()
+            const strauth = Buffer.from(auth,'base64').toString('utf-8')
+            const splitIndex = strauth.indexOf(':')
             const login = strauth.substring(0, splitIndex)
             const password = strauth.substring(splitIndex + 1) 
             if(login !== loginTest && password !== passwordTest)
